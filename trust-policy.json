@@ -1,0 +1,24 @@
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "lambda-books-executor",
+        "RoleId": "AROAIWSQS2RVEWIMIHOR2",
+        "Arn": "arn:aws:iam::account-id:role/lambda-books-executor",
+        "CreateDate": "2018-04-05T10:22:32.567Z",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "lambda.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        }
+    }
+}
+
+aws iam create-role --role-name lambda-create-event-executor \
+--assume-role-policy-document fileb://trust-policy.json
