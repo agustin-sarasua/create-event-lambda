@@ -1,5 +1,5 @@
 cd lambda
-env GOOS=linux GOARCH=amd64 go build -o /tmp/main main.go
+env GOOS=linux GOARCH=amd64 go build -o /tmp/main
 zip -j /tmp/main.zip /tmp/main
 
 # --handler is the path to the executable inside the .zip
